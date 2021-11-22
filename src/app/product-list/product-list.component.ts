@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { products } from '../products';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -8,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class ProductListComponent implements OnInit {
 
   constructor() { }
+
+  products = products;
+
+  share() {
+    window.alert('The product has been shared!');
+  }
 
   ngOnInit(): void {
   }
